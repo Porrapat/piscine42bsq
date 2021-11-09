@@ -28,7 +28,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	-norminette ./srcs# .[ch]
+	-norminette ./srcs/*.[ch]
 
 generator:
 	./map_generator.pl 6 6 1 > map_1.txt
