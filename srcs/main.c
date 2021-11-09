@@ -56,16 +56,15 @@ void	ft_check_infinity(int *size, char *str, int buf)
 
 char	*ft_read(int fd, int buff_size)
 {
-	char	buff[buff_size + 1];
+	char	*buff;
 	char	*str;
 	char	*temp;
 	int		size;
 
 	size = 0;
+	buff = (char *)malloc(buff_size + 1);
 	str = (char *)malloc(sizeof(*str) * (size + 1));
 	temp = (char *)malloc(sizeof(*str) * (size + 1));
-	str[0] = 0;
-	temp[0] = 0;
 	while (read(fd, buff, buff_size) && str && temp && size >= 0)
 	{
 		size += buff_size;
@@ -107,9 +106,6 @@ int	main(int argc, char **argv)
 		}
 	}
 	else
-	{
-		str = ft_read(0, BUFF1);
-		ft_start(str);
-	}
+		ft_start(ft_read(0, BUFF1));
 	return (0);
 }
