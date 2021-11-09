@@ -21,9 +21,7 @@ int	ft_bigger_sqr(char *str, int position[2], t_instr *info, int size)
 	x = size - 1;
 	y = 0;
 	start = info->length + position[0] + (position[1]) * (info->width + 1);
-	if (position[0] + size > info->width)
-		return (0);
-	else if (position[1] + size > info->height)
+	if (position[0] + size > info->width || position[1] + size > info->height)
 		return (0);
 	while (y < size - 1)
 	{
