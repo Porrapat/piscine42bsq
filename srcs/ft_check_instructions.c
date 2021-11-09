@@ -12,7 +12,7 @@
 
 #include "ft_bsq.h"
 
-int			ft_strlen_mod(char *str)
+int	ft_strlen_mod(char *str)
 {
 	int		i;
 
@@ -28,7 +28,7 @@ int			ft_strlen_mod(char *str)
 	return (i);
 }
 
-char		*cut_str(char *str, int n)
+char	*cut_str(char *str, int n)
 {
 	int		i;
 	char	*cpy;
@@ -43,10 +43,10 @@ char		*cut_str(char *str, int n)
 	return (cpy);
 }
 
-int			check_v(char *str, int a)
+int	check_v(char *str, int a)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
 
 	i = 0;
 	b = a - 5;
@@ -67,7 +67,7 @@ int			check_v(char *str, int a)
 	return (1);
 }
 
-t_instr		*ft_first_line(char *str)
+t_instr	*ft_first_line(char *str)
 {
 	t_instr	*ptr;
 	char	*str2;

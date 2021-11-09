@@ -12,7 +12,7 @@
 
 #include "ft_bsq.h"
 
-int		ft_get_width(char *st, t_instr inf, int width)
+int	ft_get_width(char *st, t_instr inf, int width)
 {
 	int		i;
 	int		c;
@@ -22,6 +22,7 @@ int		ft_get_width(char *st, t_instr inf, int width)
 	c = 0;
 	lines = 0;
 	while (st[++i])
+	{
 		if (st[i] == '\n')
 		{
 			if (width != -1 && width != c)
@@ -36,6 +37,7 @@ int		ft_get_width(char *st, t_instr inf, int width)
 			return (-1);
 		else
 			c++;
+	}
 	if (lines == inf.height)
 		return (width);
 	return (-1);

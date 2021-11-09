@@ -12,7 +12,7 @@
 
 #include "ft_bsq.h"
 
-int		ft_bigger_sqr(char *str, int position[2], t_instr *info, int size)
+int	ft_bigger_sqr(char *str, int position[2], t_instr *info, int size)
 {
 	int		x;
 	int		y;
@@ -26,15 +26,19 @@ int		ft_bigger_sqr(char *str, int position[2], t_instr *info, int size)
 	else if (position[1] + size > info->height)
 		return (0);
 	while (y < size - 1)
+	{
 		if (str[start + x + y * (info->width + 1)] == info->empty)
 			y++;
 		else
 			return (0);
+	}
 	x = 0;
 	while (x < size)
+	{
 		if (str[start + x + y * (info->width + 1)] == info->empty)
 			x++;
 		else
 			return (0);
+	}
 	return (1);
 }

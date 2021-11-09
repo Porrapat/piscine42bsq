@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 
-typedef struct		s_instr
+typedef struct s_instr
 {
 	int		height;
 	int		length;
@@ -26,7 +26,7 @@ typedef struct		s_instr
 	char	full;
 }					t_instr;
 
-typedef struct		s_record
+typedef struct s_record
 {
 	int		x;
 	int		y;
@@ -47,14 +47,14 @@ char				*cut_str(char *str, int n);
 void				ft_fill_board(t_record *record, char *str, t_instr *info);
 void				ft_get_record(t_instr *info, char *str, t_record *record);
 int					ft_check_case(char *str, t_instr *info,
-									int position[2], int size);
+						int position[2], int size);
 int					ft_check_square(char *str, int position[2],
-									t_instr *info, int size);
+						t_instr *info, int size);
 t_record			*ft_new_record(void);
 void				ft_put_result(char *str, int start);
 void				ft_strconcat(char *dest, char *src, int *size,
-									int buff_size);
+						int buff_size);
 int					ft_bigger_sqr(char *str, int position[2],
-									t_instr *info, int size);
+						t_instr *info, int size);
 
 #endif

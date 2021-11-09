@@ -62,8 +62,8 @@ char	*ft_read(int fd, int buff_size)
 	int		size;
 
 	size = 0;
-	str = (char*)malloc(sizeof(*str) * (size + 1));
-	temp = (char*)malloc(sizeof(*str) * (size + 1));
+	str = (char *)malloc(sizeof(*str) * (size + 1));
+	temp = (char *)malloc(sizeof(*str) * (size + 1));
 	str[0] = 0;
 	temp[0] = 0;
 	while (read(fd, buff, buff_size) && str && temp && size >= 0)
@@ -71,19 +71,19 @@ char	*ft_read(int fd, int buff_size)
 		size += buff_size;
 		ft_strcpy(temp, str);
 		free(str);
-		str = (char*)malloc(sizeof(*str) * (size + 1));
+		str = (char *)malloc(sizeof(*str) * (size + 1));
 		ft_strcpy(str, temp);
 		ft_strconcat(str, buff, &size, buff_size);
 		str[size] = '\0';
 		free(temp);
-		temp = (char*)malloc(sizeof(*temp) * (size + 1));
+		temp = (char *)malloc(sizeof(*temp) * (size + 1));
 		ft_check_infinity(&size, str, buff_size);
 	}
 	free(temp);
 	return (str);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		i;
 	char	*str;
@@ -92,6 +92,7 @@ int		main(int argc, char **argv)
 	str = NULL;
 	i = 0;
 	if (argc != 1)
+	{
 		while (++i < argc)
 		{
 			fd = open(argv[i], O_RDONLY);
@@ -104,6 +105,7 @@ int		main(int argc, char **argv)
 			else
 				ft_putstr("map error\n");
 		}
+	}
 	else
 	{
 		str = ft_read(0, BUFF1);

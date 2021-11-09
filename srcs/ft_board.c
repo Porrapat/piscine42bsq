@@ -12,7 +12,7 @@
 
 #include "ft_bsq.h"
 
-void		ft_get_record(t_instr *info, char *str, t_record *record)
+void	ft_get_record(t_instr *info, char *str, t_record *record)
 {
 	int		position[2];
 	int		max;
@@ -41,7 +41,7 @@ void		ft_get_record(t_instr *info, char *str, t_record *record)
 	}
 }
 
-int			ft_check_case(char *str, t_instr *info, int position[2], int size)
+int	ft_check_case(char *str, t_instr *info, int position[2], int size)
 {
 	int		i;
 	int		temp;
@@ -66,11 +66,11 @@ int			ft_check_case(char *str, t_instr *info, int position[2], int size)
 	}
 }
 
-int			ft_check_square(char *str, int position[2], t_instr *info, int size)
+int	ft_check_square(char *str, int position[2], t_instr *info, int size)
 {
-	int i;
-	int j;
-	int start;
+	int	i;
+	int	j;
+	int	start;
 
 	start = info->length + position[0] + (position[1]) * (info->width + 1);
 	i = size - 1;
@@ -90,7 +90,7 @@ int			ft_check_square(char *str, int position[2], t_instr *info, int size)
 	return (1);
 }
 
-void		ft_fill_board(t_record *record, char *str, t_instr *info)
+void	ft_fill_board(t_record *record, char *str, t_instr *info)
 {
 	int		x;
 	int		y;

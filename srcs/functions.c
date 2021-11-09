@@ -39,7 +39,7 @@ void	ft_putnbr(int nb)
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -49,9 +49,9 @@ void	ft_putstr(char *str)
 	}
 }
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -61,10 +61,10 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int nb;
-	int i;
+	int	nb;
+	int	i;
 
 	nb = 0;
 	i = 0;
