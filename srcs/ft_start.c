@@ -31,9 +31,7 @@ int	ft_get_width(char *st, t_instr inf, int width)
 			c = 0;
 			lines++;
 		}
-		else if (st[i] != inf.empty && st[i] != inf.obst)
-			return (-1);
-		else if (c == 2147483647)
+		else if ((st[i] != inf.empty && st[i] != inf.obst) || c == 2147483647)
 			return (-1);
 		else
 			c++;
