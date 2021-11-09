@@ -12,7 +12,7 @@
 
 NAME = bsq
 
-SRC = srcs/main.c srcs/fonctions.c srcs/fonctions2.c srcs/ft_start.c \
+SRC = srcs/main.c srcs/functions.c srcs/functions2.c srcs/ft_start.c \
 	  srcs/ft_check_instructions.c srcs/ft_board.c srcs/ft_optimisations.c
 
 all: $(NAME)
@@ -37,7 +37,7 @@ generator:
 	./map_generator.pl 16 16 5 > map_4.txt
 	./map_generator.pl 20 20 6 > map_5.txt
 
-test: all
+test: generator all
 	./bsq map_1.txt > result_1.txt
 	./bsq map_2.txt > result_2.txt
 	./bsq map_3.txt > result_3.txt
